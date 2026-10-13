@@ -1,19 +1,98 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Royalty Barbershop is a fictional barbershop website concept showcasing modern design, premium grooming, and a refined brand identity.">
     <meta name="author" content="Daniel Šteffl">
 
-    <title>Royalty| Barber Shop</title>
+    <title>Royalty | Barber Shop</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-
     <!-- JavaScript -->
     <script src="js/main.js" defer></script>
 </head>
+<body>
+    <!-- Header -->
+    <header class="header-wrapper">
+        <nav id="main-navbar" class="navbar navbar-top">
+
+            <!-- Navigation Logo -->
+            <a href="#home" class="logo-container" aria-label="Royalty Barbershop – Home">
+                <img src="assets/icons/secondary-logo.svg" class="logo-image" alt="Royalty Barbershop">
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="nav-links">
+                <a href="#about-us" class="nav-link">ABOUT US<span></span></a>
+                <a href="#services" class="nav-link">SERVICES<span></span></a>
+                <a href="#team" class="nav-link">OUR TEAM<span></span></a>
+                <a href="#contacts" class="nav-link">CONTACTS<span></span></a>
+            </div>
+
+            <!-- Navigation Book Appointment Button and Mobile menu -->
+            <div class="nav-actions">
+                <a href="" class="btn-primary">
+                    <svg class="appointment-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1V3a1 1 0 0 1 1-1Zm12 8H5v9h14v-9Zm-8.2 6.7-2.3-2.3 1.4-1.4 1.2 1.2 3-3 1.4 1.4-4.7 4.7Z"/>
+                    </svg>
+                    <span>BOOK APPOINTMENT</span>
+                </a>
+
+                <!-- Mobile Toggle Button -->
+                <button id="mobile-toggle" class="mobile-toggle" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+                    <svg class="icon-svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile dropdown menu -->
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <div class="mobile-menu-inner">
+                <a href="#about-us" class="mobile-link">ABOUT US</a>
+                <a href="#services" class="mobile-link">SERVICES</a>
+                <a href="#team" class="mobile-link">OUR TEAM</a>
+                <a href="#contacts" class="mobile-link">CONTACTS</a>
+            </div>
+        </div>
+    </header>
+    <section id="home" class="hero">
+        <div class="hero_main">
+            <p class="hero_subtitle">Royalty Barber Shop</p>
+            <h1 class="hero_title">A Better Standard<br>of Grooming</h1>
+            <p class="hero_description">Expert barbering designed to elevate your personal style.</p>
+            <a class="hero_btn" href="#services">
+                <span>Explore Services</span>
+                <span class="hero_btn-arrow" aria-hidden="true">→</span>
+            </a>
+        </div>
+
+        <div class="hero_services" aria-label="Our services">
+            <div class="hero_service-item">
+                <img class="hero_service-icon" src="assets/icons/service-icon1.svg" alt="">
+                <span class="hero_service-label">Hair Cut</span>
+            </div>
+            <div class="hero_service-item">
+                <img class="hero_service-icon" src="assets/icons/service-icon2.svg" alt="">
+                <span class="hero_service-label">Beard Trim</span>
+            </div>
+            <div class="hero_service-item">
+                <img class="hero_service-icon" src="assets/icons/service-icon3.svg" alt="">
+                <span class="hero_service-label">Hair Wash &amp; Styling</span>
+            </div>
+            <div class="hero_service-item">
+                <img class="hero_service-icon" src="assets/icons/service-icon4.svg" alt="">
+                <span class="hero_service-label">Hot Towel Shave</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="content-section">
+    </main>
+
+</body>
 </html>
