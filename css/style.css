@@ -445,14 +445,14 @@ body {
     position: relative;
     z-index: 10;
     margin-top: -2.5rem;
-    padding: 6rem 8rem;
+    padding: 8rem 8rem;
     border-radius: 2.5rem 2.5rem 0 0;
     background-color: var(--color-surface-light);
 }
 
 @media (max-width: 1024px) {
     .content-section {
-        padding: 4rem clamp(3rem, 8vw, 8rem);
+        padding: clamp(4rem, 8vw, 8rem) clamp(3rem, 8vw, 8rem);
     }
 }
 
