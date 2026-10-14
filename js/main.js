@@ -39,3 +39,24 @@ if (mobileToggle && mobileMenu) {
         link.addEventListener('click', closeMobileMenu);
     });
 }
+
+const servicesFilters = document.querySelectorAll('.service-filter');
+const servicesGrid = document.querySelector('.services-grid');
+const serviceCards = document.querySelectorAll('.service-card, .service-vip');
+
+servicesFilters.forEach(selectedFilter => {
+    selectedFilter.addEventListener('click', () => {
+        const category = selectedFilter.dataset.filter;
+
+        servicesFilters.forEach(filter => {
+            const isActive = filter === selectedFilter;
+            filter.classList.toggle('is-active', isActive);
+            filter.setAttribute('aria-pressed', String(isActive));
+        });
+
+        servicesGrid.hidden = category === 'vip';
+        serviceCards.forEach(card => {
+            card.hidden = category !== 'all' && card.dataset.category !== category;
+        });
+    });
+});
