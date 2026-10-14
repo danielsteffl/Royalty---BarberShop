@@ -48,7 +48,7 @@ body {
 
 /* Navigation before scroll */
 .navbar-top {
-    max-width: 100%;
+    max-width: 90rem;
     margin-top: 0;
     padding: 1.5rem 4rem;
     border: 1px solid var(--color-transparent);
@@ -277,6 +277,18 @@ body {
     }
 }
 
+@media (max-width: 360px) {
+    .btn-primary {
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0;
+    }
+
+    .btn-primary span {
+        display: none;
+    }
+}
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -285,7 +297,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding: 8rem 8rem 10rem;
+    padding: 8rem max(8rem, calc((100vw - 90rem) / 2 + 4rem)) 10rem;
     background:
         linear-gradient(90deg, #030809 0%, rgba(3, 8, 9, 0.98) 27%, rgba(3, 8, 9, 0.9) 48%, rgba(3, 8, 9, 0.12) 100%),
         url('../assets/images/background.webp');
@@ -295,7 +307,7 @@ body {
 }
 
 .hero_main {
-    max-width: 34rem;
+    width: min(100%, 42rem);
 }
 
 .hero_subtitle {
@@ -310,7 +322,7 @@ body {
 .hero_title {
     color: var(--color-text);
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: 4rem;
+    font-size: clamp(4rem, 5vw, 5.5rem);
     font-weight: 600;
     line-height: 1.1;
     letter-spacing: -0.1rem;
@@ -357,9 +369,9 @@ body {
 
 .hero_services {
     position: absolute;
-    right: 6rem;
+    right: max(6rem, calc((100vw - 90rem) / 2 + 4rem));
     bottom: 3rem;
-    left: 6rem;
+    left: max(6rem, calc((100vw - 90rem) / 2 + 4rem));
     display: flex;
     align-items: center;
     justify-content: space-around;
