@@ -21,7 +21,7 @@
 
             <!-- Navigation Logo -->
             <a href="#home" class="logo-container" aria-label="Royalty Barbershop – Home">
-                <img src="assets/icons/secondary-logo.svg" class="logo-image" alt="Royalty Barbershop">
+                <img src="assets/icons/primary-logo.svg" class="logo-image" alt="Royalty Barbershop">
             </a>
 
             <!-- Navigation Links -->
@@ -34,7 +34,7 @@
 
             <!-- Navigation Book Appointment Button and Mobile menu -->
             <div class="nav-actions">
-                <a href="" class="btn-primary" aria-label="Book appointment">
+                <a href="#book-appointment" class="btn-primary" aria-label="Book appointment">
                     <svg class="appointment-icon" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1V3a1 1 0 0 1 1-1Zm12 8H5v9h14v-9Zm-8.2 6.7-2.3-2.3 1.4-1.4 1.2 1.2 3-3 1.4 1.4-4.7 4.7Z"/>
                     </svg>
@@ -159,7 +159,7 @@
                             <img class="service-benefit-icon" src="assets/icons/service-icon1.svg" alt="" aria-hidden="true">
                             Includes Hot Towel & Drink
                         </span>
-                        <a class="service-book-link" href="#book-appointment">Book <span aria-hidden="true">→</span></a>
+                        <a class="service-book-link" href="#book-appointment" data-service="gentleman-haircut">Book <span aria-hidden="true">→</span></a>
                     </div>
                 </article>
 
@@ -175,7 +175,7 @@
                             <img class="service-benefit-icon" src="assets/icons/service-icon2.svg" alt="" aria-hidden="true">
                             Includes Razor Line & Drink
                         </span>
-                        <a class="service-book-link" href="#book-appointment">Book <span aria-hidden="true">→</span></a>
+                        <a class="service-book-link" href="#book-appointment" data-service="beard-trim">Book <span aria-hidden="true">→</span></a>
                     </div>
                 </article>
 
@@ -191,7 +191,7 @@
                             <img class="service-benefit-icon" src="assets/icons/service-icon3.svg" alt="" aria-hidden="true">
                             Includes Scalp Massage & Drink
                         </span>
-                        <a class="service-book-link" href="#book-appointment">Book <span aria-hidden="true">→</span></a>
+                        <a class="service-book-link" href="#book-appointment" data-service="hair-styling">Book <span aria-hidden="true">→</span></a>
                     </div>
                 </article>
             </div>
@@ -207,12 +207,135 @@
                                 <img class="service-benefit-icon" src="assets/icons/service-icon4.svg" alt="" aria-hidden="true">
                                 Full Premium Lounge Experience
                             </span>
-                            <a class="service-book-link" href="#book-appointment">Book <span aria-hidden="true">→</span></a>
+                            <a class="service-book-link" href="#book-appointment" data-service="vip-ritual">Book <span aria-hidden="true">→</span></a>
                         </div>
                     </div>
                     <div class="service-vip-price" aria-label="Price: $75">$75</div>
                 </div>
             </article>
+        </section>
+
+        <!-- Booking / Reservation -->
+        <section id="book-appointment" class="booking-section reveal" aria-labelledby="booking-title">
+            <div class="booking-heading">
+                <p class="booking-subtitle">YOUR ROYALTY EXPERIENCE</p>
+                <h2 id="booking-title" class="booking-title">Book an Appointment</h2>
+                <p class="booking-description">Choose your service, barber and preferred time.</p>
+            </div>
+
+            <form id="booking-form" class="booking-form">
+                <div class="booking-field">
+                    <label for="booking-service">
+                        Service <span aria-hidden="true">*</span>
+                    </label>
+                    <select id="booking-service" name="service" required>
+                        <option value="">Choose a service</option>
+                        <option value="gentleman-haircut">Gentleman Haircut — $45 (45 min)</option>
+                        <option value="beard-trim">Beard Sculpt &amp; Trim — $30 (30 min)</option>
+                        <option value="hair-styling">Hair Wash &amp; Styling — $35 (40 min)</option>
+                        <option value="vip-ritual">Royalty VIP Ritual — $75 (75 min)</option>
+                    </select>
+                </div>
+
+                <div class="booking-field">
+                    <label for="booking-barber">
+                        Barber <span aria-hidden="true">*</span>
+                    </label>
+                    <select id="booking-barber" name="barber" required>
+                        <option value="">Choose a barber</option>
+                        <option value="martin">Martin Korepozdik</option>
+                        <option value="adam">Adam Novotny</option>
+                        <option value="jakub">Jakub Dvorak</option>
+                    </select>
+                </div>
+
+                <div class="booking-field">
+                    <label for="booking-date">
+                        Date <span aria-hidden="true">*</span>
+                    </label>
+                    <input id="booking-date" name="date" type="date" required>
+                </div>
+
+                <div class="booking-field">
+                    <label for="booking-time">
+                        Time <span aria-hidden="true">*</span>
+                    </label>
+                    <select id="booking-time" name="time" required disabled>
+                        <option value="">Choose a date first</option>
+                    </select>
+                </div>
+
+                <div class="booking-field">
+                    <label for="booking-first-name">
+                        First name <span aria-hidden="true">*</span>
+                    </label>
+                    <input
+                        id="booking-first-name"
+                        name="firstName"
+                        type="text"
+                        autocomplete="given-name"
+                        placeholder="Your first name"
+                        required
+                    >
+                </div>
+
+                <div class="booking-field">
+                    <label for="booking-last-name">
+                        Last name <span aria-hidden="true">*</span>
+                    </label>
+                    <input
+                        id="booking-last-name"
+                        name="lastName"
+                        type="text"
+                        autocomplete="family-name"
+                        placeholder="Your last name"
+                        required
+                    >
+                </div>
+
+                <div class="booking-field booking-field-full">
+                    <label for="booking-contact">
+                        Email or phone number <span aria-hidden="true">*</span>
+                    </label>
+                    <input
+                        id="booking-contact"
+                        name="contact"
+                        type="text"
+                        autocomplete="on"
+                        placeholder="Email or phone number"
+                        required
+                    >
+                </div>
+
+                <div class="booking-field booking-field-full">
+                    <label for="booking-comment">
+                        Comment <span class="booking-optional">(optional)</span>
+                    </label>
+                    <textarea
+                        id="booking-comment"
+                        name="comment"
+                        rows="4"
+                        placeholder="Anything we should know before your visit?"
+                    ></textarea>
+                </div>
+
+                <div class="booking-form-footer booking-field-full">
+                    <p class="booking-note">
+                        Opening hours: Mon–Fri 09:00–20:00 · Sat 09:00–18:00 · Sun 10:00–16:00.
+                    </p>
+                    <button class="booking-submit" type="submit">
+                        Request appointment <span aria-hidden="true">→</span>
+                    </button>
+                </div>
+
+                <p
+                    id="booking-status"
+                    class="booking-status booking-field-full"
+                    role="status"
+                    aria-live="polite"
+                    hidden
+                ></p>
+            </form>
         </section>
 
         <section id="team" class="team-section reveal" aria-labelledby="team-title">
@@ -226,7 +349,7 @@
                 <article class="team-member">
                     <div class="team-member-photo">
                         <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=640&amp;h=640&amp;q=85" alt="Martin Korepozdik, barber" loading="lazy" decoding="async">
-                        <a class="team-book-link" href="#book-appointment" aria-label="Book with Martin Korepozdik">
+                        <a class="team-book-link" href="#book-appointment" data-barber="martin" aria-label="Book with Martin Korepozdik">
                             <span>Book with Martin</span>
                             <span class="team-book-arrow" aria-hidden="true">→</span>
                         </a>
@@ -238,7 +361,7 @@
                 <article class="team-member">
                     <div class="team-member-photo">
                         <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;w=640&amp;h=640&amp;q=85" alt="Adam Novotny, barber" loading="lazy" decoding="async">
-                        <a class="team-book-link" href="#book-appointment" aria-label="Book with Adam Novotny">
+                        <a class="team-book-link" href="#book-appointment" data-barber="adam" aria-label="Book with Adam Novotny">
                             <span>Offer with Adam</span>
                             <span class="team-book-arrow" aria-hidden="true">→</span>
                         </a>
@@ -250,7 +373,7 @@
                 <article class="team-member">
                     <div class="team-member-photo">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;w=640&amp;h=640&amp;q=85" alt="Jakub Dvorak, barber" loading="lazy" decoding="async">
-                        <a class="team-book-link" href="#book-appointment" aria-label="Book with Jakub Dvorak">
+                        <a class="team-book-link" href="#book-appointment" data-barber="jakub" aria-label="Book with Jakub Dvorak">
                             <span>Book with Jakub</span>
                             <span class="team-book-arrow" aria-hidden="true">→</span>
                         </a>
@@ -270,22 +393,22 @@
 
             <div class="work-grid">
                 <figure class="work-card">
-                    <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&amp;fit=crop&amp;w=720&amp;h=540&amp;q=85" alt="Barber tools ready for a haircut" loading="lazy" decoding="async">
+                    <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&amp;fit=crop&amp;w=720&amp;h=540&amp;q=85" alt="Barber tools" loading="lazy" decoding="async">
                 </figure>
                 <figure class="work-card">
-                    <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&amp;fit=crop&amp;w=720&amp;h=540&amp;q=85" alt="Barber carefully cutting a client's hair" loading="lazy" decoding="async">
+                    <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&amp;fit=crop&amp;w=720&amp;h=540&amp;q=85" alt="Barber cutting hair" loading="lazy" decoding="async">
                 </figure>
                 <figure class="work-card">
-                    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&amp;fit=crop&amp;w=720&amp;h=540&amp;q=85" alt="Barber refining a client's hairstyle" loading="lazy" decoding="async">
+                    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&amp;fit=crop&amp;w=720&amp;h=540&amp;q=85" alt="Barber refining hairstyle" loading="lazy" decoding="async">
                 </figure>
                 <figure class="work-card">
-                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=720&amp;h=540&amp;q=85" alt="Barber styling a haircut in the shop" loading="lazy" decoding="async">
+                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=720&amp;h=540&amp;q=85" alt="Barber styling a haircut" loading="lazy" decoding="async">
                 </figure>
                 <figure class="work-card">
-                    <img src="https://images.unsplash.com/photo-1622296089863-eb7fc530daa8?auto=format&amp;fit=crop&amp;w=720&amp;h=540&amp;q=85" alt="Detailed barbering work on a client's hair" loading="lazy" decoding="async">
+                    <img src="https://images.unsplash.com/photo-1622296089863-eb7fc530daa8?auto=format&amp;fit=crop&amp;w=720&amp;h=540&amp;q=85" alt="Detailed barbering work" loading="lazy" decoding="async">
                 </figure>
                 <figure class="work-card">
-                    <img src="https://images.unsplash.com/photo-1592647420148-bfcc177e2117?auto=format&amp;fit=crop&amp;w=720&amp;h=540&amp;q=85" alt="Finished contemporary men's haircut" loading="lazy" decoding="async">
+                    <img src="https://images.unsplash.com/photo-1592647420148-bfcc177e2117?auto=format&amp;fit=crop&amp;w=720&amp;h=540&amp;q=85" alt="Seat" loading="lazy" decoding="async">
                 </figure>
             </div>
         </section>
