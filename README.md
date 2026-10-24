@@ -54,6 +54,8 @@ No backend or booking database is connected to the website.
 
 You can view the live website here (github pages):
 
+https://danielsteffl.github.io/Royalty---BarberShop/
+
 ---
 
 Made as a personal web development practice project.
