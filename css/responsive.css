@@ -272,6 +272,51 @@
     }
 }
 
+@media (max-width: 768px) {
+    .booking-section {
+        margin-top: 5rem;
+        padding: 2rem;
+        border-radius: 2rem;
+        scroll-margin-top: 5rem;
+    }
+
+    .booking-title {
+        font-size: 2.25rem;
+    }
+
+    .booking-form-footer {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .booking-submit {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 560px) {
+    .booking-section {
+        padding: 1.5rem;
+    }
+
+    .booking-form {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .booking-field-full {
+        grid-column: auto;
+    }
+
+    .booking-form-footer, .booking-status {
+        grid-column: 1;
+    }
+
+    .booking-submit {
+        width: 100%;
+    }
+}
+
 @media (max-width: 1024px) {
     .team-grid {
         gap: 1.5rem;
@@ -376,50 +421,5 @@
 
     .footer-brand, .footer-navigation {
         grid-column: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    .booking-section {
-        margin-top: 5rem;
-        padding: 2rem;
-        border-radius: 2rem;
-        scroll-margin-top: 5rem;
-    }
-
-    .booking-title {
-        font-size: 2.25rem;
-    }
-
-    .booking-form-footer {
-        align-items: stretch;
-        flex-direction: column;
-    }
-
-    .booking-submit {
-        align-self: flex-start;
-    }
-}
-
-@media (max-width: 560px) {
-    .booking-section {
-        padding: 1.5rem;
-    }
-
-    .booking-form {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .booking-field-full {
-        grid-column: auto;
-    }
-
-    .booking-form-footer, .booking-status {
-        grid-column: 1;
-    }
-
-    .booking-submit {
-        width: 100%;
     }
 }
